@@ -12,7 +12,7 @@ args = sys.argv[1:]  # スクリプト名を除く
 hours = list(map(str, args[0].split(',')))  # x軸のデータ
 visitor_count = list(map(float, args[1].split(',')))  # y軸のデータ
 
-print("hours:", hours, "visitor_count:", visitor_count)
+print("py.hours:", hours, "py.visitor_count:", visitor_count)
 
 # 時刻データをdatetimeオブジェクトに変換
 time_data = [datetime.strptime(hour, "%H:%M") for hour in hours]
@@ -41,3 +41,5 @@ plt.xticks(rotation=45)
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
+print("グラフ表示")
